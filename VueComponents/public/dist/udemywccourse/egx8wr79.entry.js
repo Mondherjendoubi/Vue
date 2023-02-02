@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+const{h:t}=window.UdemyWCCourse;class e{render(){return[t("div",{class:"container"},t("h3",null,t("slot",null)))]}static get is(){return"body-item"}static get encapsulation(){return"shadow"}static get style(){return".container{margin-left:5px}h3{font-size:1.3rem;color:#000;margin:0 auto}"}}export{e as BodyItem};

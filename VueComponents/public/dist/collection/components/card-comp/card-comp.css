@@ -1,0 +1,134 @@
+:root {
+  --orange: 253, 166, 60;
+  --orange-light: rgba(var(--orange), 0.15);
+}
+
+.card {
+  perspective: 1500px;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 30rem;
+}
+.card__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 2rem;
+  height: 30rem;
+  transition: all 0.8s ease;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 40px rgba(var(--primary-30), 0.15);
+}
+.card__side--front--red {
+  background-image: linear-gradient(to right, var(--primary-10), var(--primary-30));
+}
+.card__side--front--blue {
+  background-image: linear-gradient(to right, var(--primary-10), var(--primary-70));
+}
+.card__side--front--orange {
+  background-image: linear-gradient(to right, var(--primary-10), var(--warning-70));
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back--red {
+  background-image: linear-gradient(to right, var(--primary-10), var(--primary-30));
+}
+.card__side--back--blue {
+  background-image: linear-gradient(to right, var(--primary-10), var(--primary-70));
+}
+.card__side--back--orange {
+  background-image: linear-gradient(to right, var(--primary-10), var(--warning-70));
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+.card__picture {
+  background-size: cover;
+}
+.card__picture img {
+  background-size: cover;
+  height: 20rem;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--primary-05);
+  position: absolute;
+  text-align: right;
+  top: 12rem;
+  right: 3rem;
+  width: 75%;
+}
+.card__heading-span {
+  padding: 0.3rem 1.2rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.card__heading-span--red {
+  background-image: linear-gradient(to right, var(--primary-10), var(--primary-30));
+}
+.card__heading-span--blue {
+  background-image: linear-gradient(to right, var(--primary-10), var(--primary-70));
+}
+.card__heading-span--orange {
+  background-image: linear-gradient(to right, var(--primary-10), var(--warning-70));
+}
+.card__details {
+  position: relative;
+  align-items: center;
+}
+.card__details ::slotted(p) {
+  position: absolute;
+  left: 2rem;
+  top: 3rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 80%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+}
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+  align-items: center;
+}
+.card__cta btn-exp {
+  position: absolute;
+  left: 2.5rem;
+  bottom: 0;
+}
+.card__price-box {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--primary-05);
+}
+.card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.card__price-value {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: 100;
+}

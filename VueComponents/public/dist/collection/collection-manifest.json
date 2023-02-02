@@ -1,0 +1,697 @@
+{
+  "components": [
+    {
+      "tag": "accordion-component",
+      "dependencies": [],
+      "componentClass": "accordionComponent",
+      "componentPath": "components/accordion-component/accordion-component.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/accordion-component/accordion-component.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "backgroundColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "background-color"
+        },
+        {
+          "name": "hoverBackgroundColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "hover-background-color"
+        },
+        {
+          "name": "itemHead",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "item-head"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "body-item",
+      "dependencies": [],
+      "componentClass": "headItem",
+      "componentPath": "components/table-components/body-item.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/table-components/body-item.scss"
+          ]
+        }
+      },
+      "shadow": true
+    },
+    {
+      "tag": "body-table",
+      "dependencies": [],
+      "componentClass": "bodyTable",
+      "componentPath": "components/table-components/body-table.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/table-components/body-table.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "numberColumn",
+          "type": "Number",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "number-column"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "btn-exp",
+      "dependencies": [],
+      "componentClass": "buttonExample",
+      "componentPath": "components/button-exp/button-example.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/button-exp/button-example.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "colorButton",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "color-button",
+          "watch": [
+            "colorButtonChanged"
+          ]
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "content"
+        },
+        {
+          "name": "fontColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "font-color",
+          "watch": [
+            "fontColorInputChanged"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "colorInput"
+        },
+        {
+          "name": "fontColorInput"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "card-comp",
+      "dependencies": [
+        "btn-exp"
+      ],
+      "componentClass": "cardComponent",
+      "componentPath": "components/card-comp/card-comp.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/card-comp/card-comp.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "cardBackButtonColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "card-back-button-color",
+          "watch": [
+            "cardBackButtonColorChanged"
+          ]
+        },
+        {
+          "name": "cardBackButtonColorFont",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "card-back-button-color-font",
+          "watch": [
+            "cardBackButtonColorFontChanged"
+          ]
+        },
+        {
+          "name": "cardBackColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "card-back-color",
+          "watch": [
+            "cardBackColorChanged"
+          ]
+        },
+        {
+          "name": "cardFrontColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "card-front-color",
+          "watch": [
+            "spanColorInputChanged",
+            "cardFrontColorChanged"
+          ]
+        },
+        {
+          "name": "price",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "price"
+        },
+        {
+          "name": "spanColorInput",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "span-color-input"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "title"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "url"
+        }
+      ],
+      "states": [
+        {
+          "name": "cardBackButtonColorFontInput"
+        },
+        {
+          "name": "cardBackButtonColorInput"
+        },
+        {
+          "name": "colorBack"
+        },
+        {
+          "name": "colorFront"
+        },
+        {
+          "name": "colorSpan"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "drop-down",
+      "dependencies": [],
+      "componentClass": "dropDown",
+      "componentPath": "components/drop-down/drop-down.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/drop-down/drop-down.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "backgroundColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "background-color"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "drop-link",
+      "dependencies": [],
+      "componentClass": "dropLink",
+      "componentPath": "components/drop-down/drop-link.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/drop-down/drop-link.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "backgroundColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "background-color"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "ft-box",
+      "dependencies": [],
+      "componentClass": "featureBox",
+      "componentPath": "components/feature-box/feature-box.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/feature-box/feature-box.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "cardColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "card-color",
+          "watch": [
+            "cardColorChanged"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "title"
+        }
+      ],
+      "states": [
+        {
+          "name": "color"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "gif-comp",
+      "dependencies": [],
+      "componentClass": "gifContainer",
+      "componentPath": "components/gif-container/gif-container.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/gif-container/gif-container.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "url",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "url"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "grid-comp",
+      "dependencies": [],
+      "componentClass": "gridComp",
+      "componentPath": "components/grid/grid-comp.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/grid/grid-comp.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "columnType",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "column-type",
+          "watch": [
+            "searchSymbolChanged"
+          ]
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "head-item",
+      "dependencies": [],
+      "componentClass": "headItem",
+      "componentPath": "components/table-components/head-item.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/table-components/head-item.scss"
+          ]
+        }
+      },
+      "shadow": true
+    },
+    {
+      "tag": "head-table",
+      "dependencies": [],
+      "componentClass": "headTable",
+      "componentPath": "components/table-components/head-table.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/table-components/head-table.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "numberColumn",
+          "type": "Number",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "number-column"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "modal-comp",
+      "dependencies": [
+        "btn-exp"
+      ],
+      "componentClass": "headItem",
+      "componentPath": "components/modal-component/modal-comp.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/modal-component/modal-comp.scss"
+          ]
+        }
+      },
+      "shadow": true
+    },
+    {
+      "tag": "nav-comp",
+      "dependencies": [],
+      "componentClass": "navigationBar",
+      "componentPath": "components/navigation-bar/navigation-bar.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/navigation-bar/navigation-bar.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "url",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "url"
+        }
+      ],
+      "events": [
+        {
+          "event": "navSelected"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "sr-comp",
+      "dependencies": [
+        "grid-comp"
+      ],
+      "componentClass": "searchGif",
+      "componentPath": "components/search-component/search-component.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/search-component/search-component.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "navSelected",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "nav-selected",
+          "watch": [
+            "navSelectedChanged"
+          ]
+        },
+        {
+          "name": "searchSymbol",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "search-symbol",
+          "watch": [
+            "searchSymbolChanged"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "gifArray"
+        },
+        {
+          "name": "idSymbol"
+        },
+        {
+          "name": "searchInput"
+        },
+        {
+          "name": "searchInputValid"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "story-comp",
+      "dependencies": [],
+      "componentClass": "StoryComp",
+      "componentPath": "components/story-comp/story-comp.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/story-comp/story-comp.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "captionStory",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "caption-story",
+          "watch": [
+            "captionStoryChanged"
+          ]
+        },
+        {
+          "name": "colorStory",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "color-story",
+          "watch": [
+            "colorStoryChanged"
+          ]
+        },
+        {
+          "name": "fontColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "font-color",
+          "watch": [
+            "fontColorInputChanged"
+          ]
+        },
+        {
+          "name": "titleStory",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "title-story",
+          "watch": [
+            "colorButtonChanged",
+            "titleStoryChanged"
+          ]
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "url"
+        }
+      ],
+      "states": [
+        {
+          "name": "captionInput"
+        },
+        {
+          "name": "colorStoryInput"
+        },
+        {
+          "name": "fontColorInput"
+        },
+        {
+          "name": "titleInput"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "table-comp",
+      "dependencies": [],
+      "componentClass": "table",
+      "componentPath": "components/table-components/table.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/table-components/table.scss"
+          ]
+        }
+      },
+      "shadow": true
+    },
+    {
+      "tag": "uc-spinner",
+      "dependencies": [],
+      "componentClass": "Spinner",
+      "componentPath": "components/spinner/spinner.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/spinner/spinner.css"
+          ]
+        }
+      },
+      "shadow": true
+    },
+    {
+      "tag": "uc-stock-finder",
+      "dependencies": [
+        "uc-spinner"
+      ],
+      "componentClass": "StockFinder",
+      "componentPath": "components/stock-finder/stock-finder.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/stock-finder/stock-finder.css"
+          ]
+        }
+      },
+      "states": [
+        {
+          "name": "loading"
+        },
+        {
+          "name": "searchResults"
+        }
+      ],
+      "events": [
+        {
+          "event": "ucSymbolSelected"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "uc-stock-price",
+      "dependencies": [
+        "uc-spinner"
+      ],
+      "componentClass": "StockPrice",
+      "componentPath": "components/stock-price/stock-price.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/stock-price/stock-price.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "stockSymbol",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "stock-symbol",
+          "watch": [
+            "stockSymbolChanged"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "error"
+        },
+        {
+          "name": "fetchedPrice"
+        },
+        {
+          "name": "loading"
+        },
+        {
+          "name": "stockInputValid"
+        },
+        {
+          "name": "stockUserInput"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "body:ucSymbolSelected",
+          "method": "onStockSymbolSelected",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "shadow": true
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.15.2",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": []
+}

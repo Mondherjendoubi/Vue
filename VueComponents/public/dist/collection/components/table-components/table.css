@@ -1,0 +1,10 @@
+.table {
+  background-color: #f6f2f2;
+  margin: auto 6rem;
+  padding: 20px 1px;
+  border: 2px solid #180202;
+  transition: all 0.4s;
+}
+.table:hover {
+  box-shadow: 0 2px 20px 2px #0330e7;
+}
