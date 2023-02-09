@@ -230,6 +230,29 @@
       "shadow": true
     },
     {
+      "tag": "check-box",
+      "dependencies": [],
+      "componentClass": "listGroup",
+      "componentPath": "components/check-box/check-box.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/check-box/check-box.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "numberColumn",
+          "type": "Number",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "number-column"
+        }
+      ],
+      "shadow": true
+    },
+    {
       "tag": "drop-down",
       "dependencies": [],
       "componentClass": "dropDown",
@@ -395,6 +418,66 @@
           "mutable": true,
           "reflectToAttr": true,
           "attr": "number-column"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "list-group",
+      "dependencies": [],
+      "componentClass": "listGroup",
+      "componentPath": "components/list-group/list-group.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/list-group/list-group.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "numberColumn",
+          "type": "Number",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "number-column"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "list-group-item",
+      "dependencies": [],
+      "componentClass": "listGroupItem",
+      "componentPath": "components/list-group/list-group-item.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/list-group/list-group-item.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "active",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "active"
+        },
+        {
+          "name": "backgroundColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "background-color"
+        },
+        {
+          "name": "checkBox",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "check-box"
         }
       ],
       "shadow": true

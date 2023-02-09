@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+const{h:e}=window.UdemyWCCourse;class t{render(){return[e("div",{class:"container"},e("h1",null,"Checkboxx !"))]}static get is(){return"check-box"}static get encapsulation(){return"shadow"}static get properties(){return{numberColumn:{type:Number,attr:"number-column",reflectToAttr:!0,mutable:!0}}}static get style(){return""}}export{t as CheckBox};

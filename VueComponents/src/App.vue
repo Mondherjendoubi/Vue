@@ -204,6 +204,106 @@
     </table-comp>
   </section>
 
+  <section class="section-7">
+    <list-group
+        number-column="4"
+    >
+      <list-group-item
+          background-color="blue"
+          slot="col-1"
+          active="true"
+          check-box="true"
+      ><h5>Hello world</h5>
+      </list-group-item>
+      <list-group-item
+          background-color="blue"
+          slot="col-2"
+      ><h5>Hello world</h5>
+      </list-group-item>
+      <list-group-item
+          background-color="red"
+          slot="col-3"
+          active="true"
+          check-box="true"
+      ><h5>Hello world</h5>
+      </list-group-item>
+      <list-group-item
+          background-color="orange"
+          slot="col-4"
+      ><h5>Hello world</h5>
+      </list-group-item>
+      <list-group-item
+          background-color="orange"
+          slot="col-4"
+          active="true"
+          check-box="true"
+      ><h5>Hello world</h5>
+      </list-group-item>
+      <list-group-item
+          background-color="orange"
+          slot="col-4"
+      ><h5>Hello world</h5>
+      </list-group-item>
+      <list-group-item
+          background-color="blue"
+          slot="col-4"
+          active="true"
+          check-box="true"
+      ><h5>Hello world</h5>
+      </list-group-item>
+    </list-group>
+  </section>
+
+  <section class="section-5">
+    <accordion-component
+        background-color="red"
+        hoverBackground-color="red"
+        item-head="Title 1"
+    >
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+    </accordion-component>
+    <accordion-component
+        background-color="blue"
+        hoverBackground-color="red"
+        item-head="Title 2"
+    >
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+    </accordion-component>
+
+    <accordion-component
+        background-color="orange"
+        hoverBackground-color="red"
+        item-head="Title 2"
+    >
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+      <p slot="p">
+        Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
+      </p>
+    </accordion-component>
+
+  </section>
+
 </template>
 
 
@@ -251,7 +351,6 @@
   padding: 20rem 0;
   background-color: rgba(128, 128, 128, 0.2);;
   background-size: cover;
-  transform: skewY(-2deg);
 }
 
 .section-6 {
@@ -266,9 +365,8 @@
 
 .section-7 {
   position: relative;
-
   padding: 20rem 0;
-  background-color: rgba(128, 128, 128, 0.2);;
+  background-color: white;
   background-size: cover;
 }
 
@@ -280,14 +378,17 @@
   background-size: cover;
 }
 
-p{
+p {
   margin-top: 30px;
 }
 
-grid-comp{
+grid-comp {
   position: absolute;
-  top:200px;
-
+  top: 200px;
+}
+list-group{
+  top: 0;
+  left: 600px;
 }
 
 </style>

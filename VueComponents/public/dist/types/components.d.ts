@@ -55,6 +55,13 @@ export namespace Components {
     'url'?: string;
   }
 
+  interface CheckBox {
+    'numberColumn': number;
+  }
+  interface CheckBoxAttributes extends StencilHTMLAttributes {
+    'numberColumn'?: number;
+  }
+
   interface DropDown {
     'backgroundColor': string;
   }
@@ -90,6 +97,24 @@ export namespace Components {
   }
   interface GridCompAttributes extends StencilHTMLAttributes {
     'columnType'?: string;
+  }
+
+  interface ListGroupItem {
+    'active': string;
+    'backgroundColor': string;
+    'checkBox': string;
+  }
+  interface ListGroupItemAttributes extends StencilHTMLAttributes {
+    'active'?: string;
+    'backgroundColor'?: string;
+    'checkBox'?: string;
+  }
+
+  interface ListGroup {
+    'numberColumn': number;
+  }
+  interface ListGroupAttributes extends StencilHTMLAttributes {
+    'numberColumn'?: number;
   }
 
   interface ModalComp {}
@@ -171,11 +196,14 @@ declare global {
     'AccordionComponent': Components.AccordionComponent;
     'BtnExp': Components.BtnExp;
     'CardComp': Components.CardComp;
+    'CheckBox': Components.CheckBox;
     'DropDown': Components.DropDown;
     'DropLink': Components.DropLink;
     'FtBox': Components.FtBox;
     'GifComp': Components.GifComp;
     'GridComp': Components.GridComp;
+    'ListGroupItem': Components.ListGroupItem;
+    'ListGroup': Components.ListGroup;
     'ModalComp': Components.ModalComp;
     'NavComp': Components.NavComp;
     'SrComp': Components.SrComp;
@@ -194,11 +222,14 @@ declare global {
     'accordion-component': Components.AccordionComponentAttributes;
     'btn-exp': Components.BtnExpAttributes;
     'card-comp': Components.CardCompAttributes;
+    'check-box': Components.CheckBoxAttributes;
     'drop-down': Components.DropDownAttributes;
     'drop-link': Components.DropLinkAttributes;
     'ft-box': Components.FtBoxAttributes;
     'gif-comp': Components.GifCompAttributes;
     'grid-comp': Components.GridCompAttributes;
+    'list-group-item': Components.ListGroupItemAttributes;
+    'list-group': Components.ListGroupAttributes;
     'modal-comp': Components.ModalCompAttributes;
     'nav-comp': Components.NavCompAttributes;
     'sr-comp': Components.SrCompAttributes;
@@ -232,6 +263,12 @@ declare global {
     new (): HTMLCardCompElement;
   };
 
+  interface HTMLCheckBoxElement extends Components.CheckBox, HTMLStencilElement {}
+  var HTMLCheckBoxElement: {
+    prototype: HTMLCheckBoxElement;
+    new (): HTMLCheckBoxElement;
+  };
+
   interface HTMLDropDownElement extends Components.DropDown, HTMLStencilElement {}
   var HTMLDropDownElement: {
     prototype: HTMLDropDownElement;
@@ -260,6 +297,18 @@ declare global {
   var HTMLGridCompElement: {
     prototype: HTMLGridCompElement;
     new (): HTMLGridCompElement;
+  };
+
+  interface HTMLListGroupItemElement extends Components.ListGroupItem, HTMLStencilElement {}
+  var HTMLListGroupItemElement: {
+    prototype: HTMLListGroupItemElement;
+    new (): HTMLListGroupItemElement;
+  };
+
+  interface HTMLListGroupElement extends Components.ListGroup, HTMLStencilElement {}
+  var HTMLListGroupElement: {
+    prototype: HTMLListGroupElement;
+    new (): HTMLListGroupElement;
   };
 
   interface HTMLModalCompElement extends Components.ModalComp, HTMLStencilElement {}
@@ -338,11 +387,14 @@ declare global {
     'accordion-component': HTMLAccordionComponentElement
     'btn-exp': HTMLBtnExpElement
     'card-comp': HTMLCardCompElement
+    'check-box': HTMLCheckBoxElement
     'drop-down': HTMLDropDownElement
     'drop-link': HTMLDropLinkElement
     'ft-box': HTMLFtBoxElement
     'gif-comp': HTMLGifCompElement
     'grid-comp': HTMLGridCompElement
+    'list-group-item': HTMLListGroupItemElement
+    'list-group': HTMLListGroupElement
     'modal-comp': HTMLModalCompElement
     'nav-comp': HTMLNavCompElement
     'sr-comp': HTMLSrCompElement
@@ -361,11 +413,14 @@ declare global {
     'accordion-component': HTMLAccordionComponentElement;
     'btn-exp': HTMLBtnExpElement;
     'card-comp': HTMLCardCompElement;
+    'check-box': HTMLCheckBoxElement;
     'drop-down': HTMLDropDownElement;
     'drop-link': HTMLDropLinkElement;
     'ft-box': HTMLFtBoxElement;
     'gif-comp': HTMLGifCompElement;
     'grid-comp': HTMLGridCompElement;
+    'list-group-item': HTMLListGroupItemElement;
+    'list-group': HTMLListGroupElement;
     'modal-comp': HTMLModalCompElement;
     'nav-comp': HTMLNavCompElement;
     'sr-comp': HTMLSrCompElement;

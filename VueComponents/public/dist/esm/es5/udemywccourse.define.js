@@ -20,6 +20,9 @@ import {
   headItem,
   headItem,
   headTable,
+  listGroup,
+  listGroup,
+  listGroupItem,
   navigationBar,
   searchGif,
   table
@@ -44,6 +47,9 @@ export function defineCustomElements(win, opts) {
     headItem,
     headItem,
     headTable,
+    listGroup,
+    listGroup,
+    listGroupItem,
     navigationBar,
     searchGif,
     table
