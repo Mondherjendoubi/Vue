@@ -301,8 +301,45 @@
         Paragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque eveniet iste magni
       </p>
     </accordion-component>
-
   </section>
+
+  <div class="section section-5">
+    <tabs-comp
+        number-column="6"
+    >
+      <tab-comp
+          background-color="blue"
+          content="Tab 1"
+          slot="1"
+          number-row="1"></tab-comp>
+      <tab-comp
+          background-color="orange"
+          content="Tab 2"
+          slot="2"
+          number-row="2"></tab-comp>
+      <tab-comp
+          background-color="blue"
+          content="Tab 3"
+          slot="3"
+          number-row="3"></tab-comp>
+      <tab-comp
+          background-color="red"
+          content="Tab 4"
+          slot="4"
+          number-row="4"></tab-comp>
+      <tab-comp
+          background-color="orange"
+          content="Tab 5"
+          slot="5"
+          number-row="5"></tab-comp>
+      <tab-comp
+          background-color="blue"
+          content="Tab 6"
+          slot="6"
+          number-row="6"></tab-comp>
+    </tabs-comp>
+
+  </div>
 
 </template>
 
@@ -386,7 +423,8 @@ grid-comp {
   position: absolute;
   top: 200px;
 }
-list-group{
+
+list-group {
   top: 0;
   left: 600px;
 }

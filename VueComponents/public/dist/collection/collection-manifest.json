@@ -657,6 +657,63 @@
       "shadow": true
     },
     {
+      "tag": "tab-comp",
+      "dependencies": [],
+      "componentClass": "tabComponent",
+      "componentPath": "components/tab/tab-comp.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/tab/tab-comp.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "activeState",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "active-state"
+        },
+        {
+          "name": "backgroundColor",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "background-color"
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "content"
+        },
+        {
+          "name": "numberRow",
+          "type": "Number",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "number-row"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "body:clickedButton",
+          "method": "onLinkSelected",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "events": [
+        {
+          "event": "buttonSelected"
+        }
+      ],
+      "shadow": true
+    },
+    {
       "tag": "table-comp",
       "dependencies": [],
       "componentClass": "table",
@@ -668,6 +725,54 @@
           ]
         }
       },
+      "shadow": true
+    },
+    {
+      "tag": "tabs-comp",
+      "dependencies": [],
+      "componentClass": "tabsComponent",
+      "componentPath": "components/tab/tabs-comp.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/tab/tabs-comp.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "active",
+          "type": "Number",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "active"
+        },
+        {
+          "name": "numberColumn",
+          "type": "Number",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "number-column"
+        }
+      ],
+      "states": [
+        {
+          "name": "activeLink"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "body:buttonSelected",
+          "method": "onLinkSelected",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "events": [
+        {
+          "event": "clickedButton"
+        }
+      ],
       "shadow": true
     },
     {

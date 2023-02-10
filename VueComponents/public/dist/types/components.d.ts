@@ -167,6 +167,30 @@ export namespace Components {
     'url'?: string;
   }
 
+  interface TabComp {
+    'activeState': string;
+    'backgroundColor': string;
+    'content': string;
+    'numberRow': number;
+  }
+  interface TabCompAttributes extends StencilHTMLAttributes {
+    'activeState'?: string;
+    'backgroundColor'?: string;
+    'content'?: string;
+    'numberRow'?: number;
+    'onButtonSelected'?: (event: CustomEvent<string>) => void;
+  }
+
+  interface TabsComp {
+    'active': number;
+    'numberColumn': number;
+  }
+  interface TabsCompAttributes extends StencilHTMLAttributes {
+    'active'?: number;
+    'numberColumn'?: number;
+    'onClickedButton'?: (event: CustomEvent<string>) => void;
+  }
+
   interface BodyItem {}
   interface BodyItemAttributes extends StencilHTMLAttributes {}
 
@@ -211,6 +235,8 @@ declare global {
     'UcStockFinder': Components.UcStockFinder;
     'UcStockPrice': Components.UcStockPrice;
     'StoryComp': Components.StoryComp;
+    'TabComp': Components.TabComp;
+    'TabsComp': Components.TabsComp;
     'BodyItem': Components.BodyItem;
     'BodyTable': Components.BodyTable;
     'HeadItem': Components.HeadItem;
@@ -237,6 +263,8 @@ declare global {
     'uc-stock-finder': Components.UcStockFinderAttributes;
     'uc-stock-price': Components.UcStockPriceAttributes;
     'story-comp': Components.StoryCompAttributes;
+    'tab-comp': Components.TabCompAttributes;
+    'tabs-comp': Components.TabsCompAttributes;
     'body-item': Components.BodyItemAttributes;
     'body-table': Components.BodyTableAttributes;
     'head-item': Components.HeadItemAttributes;
@@ -353,6 +381,18 @@ declare global {
     new (): HTMLStoryCompElement;
   };
 
+  interface HTMLTabCompElement extends Components.TabComp, HTMLStencilElement {}
+  var HTMLTabCompElement: {
+    prototype: HTMLTabCompElement;
+    new (): HTMLTabCompElement;
+  };
+
+  interface HTMLTabsCompElement extends Components.TabsComp, HTMLStencilElement {}
+  var HTMLTabsCompElement: {
+    prototype: HTMLTabsCompElement;
+    new (): HTMLTabsCompElement;
+  };
+
   interface HTMLBodyItemElement extends Components.BodyItem, HTMLStencilElement {}
   var HTMLBodyItemElement: {
     prototype: HTMLBodyItemElement;
@@ -402,6 +442,8 @@ declare global {
     'uc-stock-finder': HTMLUcStockFinderElement
     'uc-stock-price': HTMLUcStockPriceElement
     'story-comp': HTMLStoryCompElement
+    'tab-comp': HTMLTabCompElement
+    'tabs-comp': HTMLTabsCompElement
     'body-item': HTMLBodyItemElement
     'body-table': HTMLBodyTableElement
     'head-item': HTMLHeadItemElement
@@ -428,6 +470,8 @@ declare global {
     'uc-stock-finder': HTMLUcStockFinderElement;
     'uc-stock-price': HTMLUcStockPriceElement;
     'story-comp': HTMLStoryCompElement;
+    'tab-comp': HTMLTabCompElement;
+    'tabs-comp': HTMLTabsCompElement;
     'body-item': HTMLBodyItemElement;
     'body-table': HTMLBodyTableElement;
     'head-item': HTMLHeadItemElement;

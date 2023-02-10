@@ -1,0 +1,20 @@
+.tabs {
+  display: table; /* Allow the centering to work */
+  margin: 0 auto;
+}
+
+ul {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+  left: 200px;
+}
+
+.container{
+  position: relative;
+  margin : 0 10px;
+  transition: all 0.2s ;
+  display: inline-block;
+}
+
+

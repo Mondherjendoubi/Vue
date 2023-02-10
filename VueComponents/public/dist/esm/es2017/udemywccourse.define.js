@@ -25,7 +25,9 @@ import {
   listGroupItem,
   navigationBar,
   searchGif,
-  table
+  tabComponent,
+  table,
+  tabsComponent
 } from './udemywccourse.components.js';
 
 export function defineCustomElements(win, opts) {
@@ -52,6 +54,8 @@ export function defineCustomElements(win, opts) {
     listGroupItem,
     navigationBar,
     searchGif,
-    table
+    tabComponent,
+    table,
+    tabsComponent
   ], opts);
 }
